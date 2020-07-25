@@ -1,1 +1,1 @@
-import modulos_menu
+from . import modulos_menu

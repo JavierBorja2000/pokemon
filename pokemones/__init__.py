@@ -1,1 +1,1 @@
-import pokemon, pikachu, charizard, squirtle, golem
+from . import pokemon
