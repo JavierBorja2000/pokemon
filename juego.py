@@ -1,6 +1,5 @@
 from modulos import modulos_menu as mod
 from pokemones.pokemon import Pikachu, Charizard, Golem, Squirtle
-#from pokemones.combate import Combate
 
 mod.instrucciones()
 print()
@@ -28,6 +27,7 @@ while salida == True:
         if accion == "1":
             pokemon1.atacar(pokemon2)
             salida = mod.verificar_vida(jugador1,pokemon2)
+            if salida == False: break
             mod.estado_actual(pokemon1, jugador1, pokemon2, jugador2)
         elif accion == "2":
             pokemon1.curar()
@@ -42,6 +42,7 @@ while salida == True:
         if accion == "1":
             pokemon2.atacar(pokemon1)
             salida = mod.verificar_vida(jugador2, pokemon1)
+            if salida == False: break
             mod.estado_actual(pokemon1, jugador1, pokemon2, jugador2)
         elif accion == "2":
             pokemon2.curar()
